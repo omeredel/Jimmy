@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.TrainerMainControllers">
+   <children>
+      <TabPane prefHeight="720.0" prefWidth="1280.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Bio">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #efecec;">
+                     <children>
+                        <Label layoutX="380.0" layoutY="70.0" text="First Name:" textFill="#5c5757">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="firstnameTxt_bio" focusColor="#62929a" layoutX="522.0" layoutY="62.0" prefHeight="31.0" prefWidth="264.0" unFocusColor="#5c5757">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </JFXTextField>
+                        <Label layoutX="382.0" layoutY="140.0" text="Last Name:" textFill="#5c5757">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="lastnameTxt_bio" focusColor="#62929a" layoutX="522.0" layoutY="135.0" prefHeight="31.0" prefWidth="264.0" unFocusColor="#5c5757">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </JFXTextField>
+                        <Label layoutX="446.0" layoutY="215.0" text="Gym:" textFill="#5c5757">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="gymTxt_bio" focusColor="#62929a" layoutX="522.0" layoutY="206.0" prefHeight="31.0" prefWidth="264.0" unFocusColor="#5c5757">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </JFXTextField>
+                        <Label layoutX="356.0" layoutY="286.0" text="Date Of Birth:" textFill="#5c5757">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <JFXDatePicker fx:id="bodDate_bio" defaultColor="#62929a" layoutX="522.0" layoutY="288.0" prefHeight="31.0" prefWidth="302.0" />
+                        <Label layoutX="417.0" layoutY="348.0" text="Gender:" textFill="#5c5757">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <JFXRadioButton fx:id="maleRdio_bio" layoutX="522.0" layoutY="351.0" prefHeight="30.0" prefWidth="138.0" text="Male" textFill="#5c5757">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="gender" />
+                           </toggleGroup>
+                        </JFXRadioButton>
+                        <JFXRadioButton fx:id="femaleRdio_bio" layoutX="522.0" layoutY="381.0" prefHeight="30.0" prefWidth="138.0" text="Female" textFill="#5c5757" toggleGroup="$gender">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </JFXRadioButton>
+                        <JFXRadioButton fx:id="didRdio_bio" layoutX="522.0" layoutY="411.0" prefHeight="30.0" prefWidth="138.0" text="Did you just?!" textFill="#5c5757" toggleGroup="$gender">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </JFXRadioButton>
+                        <JFXButton fx:id="saveBtn_bio" layoutX="824.0" layoutY="558.0" onAction="#saveChangesAction" prefHeight="44.0" prefWidth="157.0" style="-fx-background-color: #62929a;" text="Save Changes" textFill="#efecec">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="resetBtn_bio" layoutX="278.0" layoutY="558.0" onAction="#resetBtnAction" prefHeight="44.0" prefWidth="157.0" style="-fx-background-color: #62929a;" text="Reset" textFill="#efecec">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </JFXButton>
+                        <Label fx:id="statusLbl_bio" alignment="CENTER" disable="true" layoutX="500.0" layoutY="535.0" prefHeight="91.0" prefWidth="252.0" text="statusLbl_bio" textAlignment="CENTER" textFill="#5c5757" wrapText="true">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <effect>
+                              <SepiaTone />
+                           </effect>
+                        </Label>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Trainees">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #efecec;">
+                     <children>
+                        <JFXComboBox fx:id="traineeLst" focusColor="#62929a" layoutX="391.0" layoutY="41.0" onAction="#onSelectionTraineeChoiceBox" prefHeight="31.0" prefWidth="499.0" unFocusColor="#5c5757" />
+                        <Label fx:id="firstnameLbl_tr" layoutX="60.0" layoutY="187.0" text="First Name:" textFill="#363434">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lastnameLbl_tr" layoutX="63.0" layoutY="240.0" text="Last Name:" textFill="#363434">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="gymLbl_tr" layoutX="126.0" layoutY="290.0" text="Gym:" textFill="#363434">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="dobLbl_tr" layoutX="36.0" layoutY="344.0" text="Date Of Birth:" textFill="#363434">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="genderLbl_tr" layoutX="97.0" layoutY="393.0" text="Gender:" textFill="#363434">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="firstnameAns_tr" layoutX="200.0" layoutY="187.0" prefHeight="35.0" prefWidth="219.0" text="firstnameAns" textFill="#5c5757">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lastnameAns_tr" layoutX="200.0" layoutY="240.0" prefHeight="35.0" prefWidth="219.0" text="lastnameAns" textFill="#5c5757">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="gymAns_tr" layoutX="200.0" layoutY="290.0" prefHeight="35.0" prefWidth="219.0" text="gymAns" textFill="#5c5757">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="dobAns_tr" layoutX="200.0" layoutY="344.0" prefHeight="35.0" prefWidth="219.0" text="dobAns" textFill="#5c5757">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="genderAns_tr" layoutX="200.0" layoutY="393.0" prefHeight="35.0" prefWidth="219.0" text="genderAns" textFill="#5c5757">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="infoLbl_tr" layoutX="16.0" layoutY="449.0" text="Additional Info:" textFill="#363434">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="infoBox_tr" layoutX="200.0" layoutY="449.0" prefHeight="154.0" prefWidth="331.0" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Exercises">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #efecec;">
+                     <children>
+                        <JFXComboBox fx:id="muscleGroupLst_Exr" focusColor="#62929a" layoutX="278.0" layoutY="41.0" onAction="#onSelectionMuscleGroupChoiceBox" prefHeight="31.0" prefWidth="499.0" unFocusColor="#5c5757" />
+                        <JFXButton fx:id="addBtn_Exr" layoutX="806.0" layoutY="35.0" prefHeight="13.0" prefWidth="140.0" style="-fx-background-color: #62929a;" text="Add an Exercise" textFill="#efecec">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </JFXButton>
+                        <TableView fx:id="exercisesTbl_Exr" editable="true" layoutX="68.0" layoutY="108.0" prefHeight="522.0" prefWidth="1144.0" visible="false">
+                          <columns>
+                            <TableColumn fx:id="nameClmn_Exr" prefWidth="230.0" text="Exercise Name" />
+                            <TableColumn fx:id="groupClmn_Exr" prefWidth="185.0" text="Exercise Muscle Group" />
+                              <TableColumn fx:id="explanationClmn_Exr" minWidth="0.0" prefWidth="277.0" text="Explanation" />
+                              <TableColumn fx:id="graphicClmn_Exr" prefWidth="451.0" text="Graphic Explanation" />
+                          </columns>
+                        </TableView>
+                        <JFXListView fx:id="exercisesLst_Exr" layoutX="65.0" layoutY="91.0" prefHeight="556.0" prefWidth="1151.0" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

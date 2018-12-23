@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="loginPane" prefHeight="302.0" prefWidth="475.0" style="-fx-background-color: #efecec;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginControllers">
+   <children>
+      <JFXButton fx:id="signinBtn" buttonType="RAISED" defaultButton="true" layoutX="280.0" layoutY="199.0" onAction="#signinAction" prefHeight="21.0" prefWidth="93.0" style="-fx-background-color: #62929a;" text="Sign In" textAlignment="CENTER" textFill="#efecec" />
+      <JFXTextField id="sdfs" fx:id="usernameTxt" focusColor="#62929a" labelFloat="true" layoutX="102.0" layoutY="113.0" prefHeight="31.0" prefWidth="271.0" promptText="Enter Your Username" unFocusColor="#5c5757" />
+      <JFXPasswordField fx:id="passwordTxt" focusColor="#62929a" layoutX="102.0" layoutY="150.0" prefHeight="31.0" prefWidth="271.0" promptText="Enter Your Password" unFocusColor="#5c5757" />
+      <CheckBox fx:id="rememberTgl" layoutX="102.0" layoutY="204.0" mnemonicParsing="false" text="Remember Me?" textFill="#5c5757" />
+      <Label fx:id="lbl" layoutX="57.0" layoutY="26.0" text="Welcome To Jimmy" textFill="#5c5757">
+         <font>
+            <Font size="42.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="registerBtn" buttonType="RAISED" layoutX="14.0" layoutY="257.0" onAction="#registerAction" prefHeight="21.0" prefWidth="93.0" style="-fx-background-color: #62929a;" text="Register" textAlignment="CENTER" textFill="#efecec" />
+      <Label fx:id="statusLbl" alignment="CENTER" contentDisplay="CENTER" disable="true" layoutX="132.0" layoutY="262.0" prefHeight="21.0" prefWidth="206.0" text="Wrong Username/Password" textAlignment="RIGHT" textFill="#1ab553" wrapText="true" />
+   </children>
+</AnchorPane>

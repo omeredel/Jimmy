@@ -1,0 +1,5 @@
+Color Scheme:
+#363434	blackish
+#5c5757	Greyish
+#62929a	Cyanish
+#efecec	Whiteish
